@@ -1,0 +1,286 @@
+:root {
+  --primary-color: #ffc908;
+  --social-bg: #575c5c;
+  --active:#e21712;
+}
+@font-face {
+  font-family: "Merriweather-LightItalic";
+  src: url(../font/Merriweather-LightItalic.ttf);
+}
+@font-face {
+  font-family: "Dosis-SemiBold";
+  src: url(../font/Dosis-SemiBold.ttf);
+}
+@font-face {
+  font-family: "MyriadPro-Semibold";
+  src: url(../font/MyriadPro-Semibold.ttf);
+}
+@font-face{
+    font-family: "MyriadPro-Bold";
+    src: url(../font/MyriadPro-Bold.ttf);
+}
+@font-face{
+    font-family: "MyriadPro-Regular";
+    src: url(../font/MyriadPro-Regular.ttf);
+}
+@font-face{
+    font-family: "Bank Gothic Light Regular";
+    src: url(../font/Bank\ Gothic\ Light\ Regular.otf);
+}
+@font-face{
+    font-family: "Zurich Black Extended BT";
+    src: url(../font/Zurich\ Black\ Extended\ BT.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header {
+  position: relative;
+}
+.header-top,
+.header-bottom {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.header-top {
+  padding: 45px 0 35px;
+}
+.header-bottom {
+  padding: 20px 25px 15px 0;
+}
+.header-logo {
+  margin-right: 60px;
+}
+/* full width double stripe */
+.header::before,
+.header::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #ccc;
+}
+.header::before {
+  bottom: 65px;
+}
+.header::after {
+  bottom: 62px;
+}
+.header-list,
+.social-list {
+  display: flex;
+}
+/* style and clear input */
+.form-search [type="text"] {
+  border: none;
+  border-bottom: 2px solid transparent;
+}
+.form-search [type="text"]::placeholder {
+  font-family: "Merriweather-LightItalic", serif;
+}
+.form-search [type="text"]:focus {
+  outline: none;
+  border-bottom: 2px solid rgb(36, 36, 36);
+}
+/* style for header button */
+.form-subscribe{
+    position: relative;
+    overflow: hidden;
+}
+.button-subscribe {
+  padding: 0 40px;
+  font: 14px/48px "Dosis-SemiBold", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 1px solid #000;
+  cursor: pointer;   
+  background: url(../img/bg.jpg) no-repeat right -55% top 0;
+  transition: all .3s linear; 
+}
+.button-subscribe:hover{
+    background: url(../img/bg.jpg) no-repeat right 0% top 0;
+    color: #fff;
+    transition: all .3s linear;
+} 
+/* style for main nav list */
+.header-list {
+  font: 16px/30px "MyriadPro-Semibold", sans-serif;
+  text-transform: uppercase;
+  display: flex;
+  flex-wrap: wrap;
+}
+.header-list__item:not(:last-child) {
+  margin-right: 65px;
+}
+.header-list__item:hover,
+.social-list__link:hover {
+  color: var(--primary-color); 
+}
+/* social header list */
+.social-list__item:not(:first-child) {
+  margin-left: 30px;
+}
+.social-list__link {
+  color: var(--social-bg);
+}
+/* MAIN */
+/* SECTION SLIDER */
+.slider{
+    min-height: 880px;
+    background:url(../img/header.jpg) no-repeat center;
+    background-size: cover;
+    color: #fff; 
+    display: flex;
+    align-items: center;
+    padding: 0 40px; 
+    overflow: hidden;
+} 
+.box-top{
+    width: 280px;
+    text-align: center;
+}
+.slider-box{
+    display: flex;
+    flex-direction: column;
+    min-height: 650px;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+}
+/* stripe */
+.slider-box::before{
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 250%;
+    top: -33%;
+    left: -40%;
+    background-color: #000000a8;
+    transform: rotate(148deg);
+    z-index: -1;
+}
+.box-top__title{
+    font:48px/36px "Bank Gothic Light Regular",sans-serif;
+}
+.box-top__desc{
+    display: inline-block;
+    text-transform: uppercase;
+    font: 16px/16px "MyriadPro-Bold", sans-serif;
+    background: url(../img/corner.png) no-repeat left top;
+    padding-left: 20px;
+}
+.box-bottom{
+    width: 560px; 
+}
+.box-bottom-content{
+    display: flex;
+    align-items: flex-start;
+}
+.box-bottom__label{
+    font: 18px/19.5px "MyriadPro-Semibold", sans-serif;
+    text-transform: uppercase;
+}
+.content-title{
+    font: 44px/53px "Zurich Black Extended BT", sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.content-text{
+    font: 15px/19px "MyriadPro-Regular", sans-serif;
+    margin-bottom: 30px;
+}
+.control{
+    width: 46px;
+    margin-right: 20px;
+    padding-top: 10px;
+}
+.control-up,
+.control-down{
+    width: 45px;
+    height: 45px;
+    border: 1px solid #fff;
+    line-height: 45px;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 7px;
+}
+.control-active{
+    background-color:var(--active);
+}
+/* button explore */
+.content-button{
+    display: inline-block;
+    font: 18px/18px "MyriadPro-Bold",sans-serif;
+    background: var(--primary-color) url(../img/corner-black.png) no-repeat right 5px top 5px;
+    text-transform: uppercase;
+    color: #000;
+    padding: 15px 20px;
+    margin-bottom: 35px;
+    transition: all .2s linear;
+
+}
+/* hover on button  */
+.content-button:hover{
+    color: #fff;
+    background-position: right 2px top 2px;
+    transition: all .2s linear;
+}
+.counter{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+.counter-active{
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+/* MAIN SECTION */
+.main-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+}
+.main-section-left{
+    width: 33%;
+}
+.main-section-right{
+    width: 66%;
+}
+/* shadow */
+.shadow{
+    box-shadow: 1px 8px 11px 6px #ccc;
+}
+/* LEFT SECTION - ASIDE */
+
+/* where am i */
+.where-ami{
+    padding: 25px;
+}
+.box-title{
+    font: 30px/48px "MyriadPro-Bold", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    background: url(../img/Line.png);
+}
+.where-ami__map{
+    display: block;
+    max-width: 100%;
+}
+/* about me */
+.about-me{
+    padding: 50px;
+}
+.about-me__text{
+    font: 24.6px/40px "MyriadPro-Regular", sans-serif;
+    text-align: center;
+}
