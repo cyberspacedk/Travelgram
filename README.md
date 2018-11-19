@@ -1,2 +1,4 @@
 # Travelgram
-Training PSD template built on flex
+Portfolio/Blog built on flex
+
+## [Live](https://cyberspacedk.github.io/Travelgram/)
