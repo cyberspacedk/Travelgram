@@ -40,6 +40,10 @@
   font-family: "NirmalaB";
   src: url(../font/NirmalaB.ttf);
 }
+@font-face {
+  font-family: "HelveticaLTStd-UltraComp";
+  src: url(../font/HelveticaLTStd-UltraComp.otf);
+}
 * {
   margin: 0;
   padding: 0;
@@ -503,7 +507,7 @@
   padding: 5px;
 }
 /* hover */
-.content-more__read-more:hover{
+.content-more__read-more:hover {
   color: var(--primary-color);
   background-color: #fff;
 }
@@ -555,7 +559,7 @@
   padding: 0 20px;
   transition: all 0.3s linear;
 }
- 
+
 /* show hidden */
 .content-image-box:hover .content-image-box__hidden,
 .content-box-wide__img:hover .content-image-box__hidden {
@@ -638,3 +642,218 @@
 .pagination-next:hover {
   font-weight: 600;
 }
+/* gallery -box */
+.gallery {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.gallery-item {
+  width: calc(100% / 4);
+  height: 300px;
+  background-color: rgb(104, 103, 103);
+  overflow: hidden;
+}
+.footer-social__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px 0;
+}
+.footer-social-list__item:not(:last-child) {
+  margin-right: 50px;
+}
+.footer-social-list__link {
+  font: 14px/21px "MyriadPro-Bold", sans-serif;
+}
+.footer-social-list__link .fab {
+  margin-right: 5px;
+}
+.footer-social-list__link:hover .fab {
+  color: var(--primary-color);
+}
+.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+.footer-nav {
+  padding: 50px 0;
+  background-color: rgba(0, 0, 0, 0.63);
+}
+.footer-nav .header-list {
+  justify-content: center;
+}
+.footer-copy {
+  display: flex;
+  justify-content: flex-end;
+}
+.footer-copy__author {
+  font: 27px/68px "HelveticaLTStd-UltraComp", sans-serif;
+  padding-right: 20px;
+}
+/* media */
+@media (max-width:550px){
+  .control {
+    width: 30px; 
+  }
+  .content-title{
+    font-size: 36px;
+  }
+  .box-bottom-content{
+    width: 360px;
+  }
+  .box-top__desc {
+    font-size: 11px;
+  }
+  .social-list__link,
+  .content-more__share{
+    display: none;
+  }
+  .twin-img{
+    height: 130px;
+  }
+  .hiden-box__link{
+    font-size: 16px;
+    padding: 0;
+  }
+}
+@media (max-width: 685px) {
+  .header-top {
+    flex-direction: column;
+    align-items: center;
+  }
+  .header-logo {
+    margin: 0;
+  }
+  .header-logo {
+    order: 1;
+    margin-bottom: 20px;
+  }
+  .form-search {
+    order: 2;
+    margin-bottom: 20px;
+  }
+  .form-subscribe {
+    order: 3;
+  }
+  .header-bottom {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px 20px 0;
+  }
+  .header-list {
+    font-size: 14px;
+  }
+  .header-list__item:not(:last-child) {
+    margin-right: 5px;
+  }
+  .social-list {
+    width: 100%;
+    justify-content: center;
+  } 
+  .main-section-left,
+  .main-section-right {
+    width: 100%;
+  }
+  .content-box__left-area {
+    min-height: 160px;
+  }
+  .content-more {
+    align-items: baseline;
+  }
+  .content-image-box {
+    width: 200px;
+    height: 200px;
+  }
+  .content-more__share {
+    margin-left: 50px;
+    margin-right: 10px;
+  }
+  .content-image-box {
+    position: relative;
+    top: 0;
+  }
+  .second .content-more {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+  }
+  .content-box-twin :first-child {
+    padding-right: 0;
+  }
+  .twin-img {
+    height: 180px;
+  }
+  .content-box-twin .content-box-wide__flex .content-more {
+    display: none;
+  }
+  .gallery-item {
+    height: 95px;
+  }
+  .footer-copy {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 686px) and (max-width:1199px) {
+  .main-section-left {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .main-section-left > div {
+    width: 48%;
+  }
+  .header-bottom .social-list{
+    display: flex;
+    width: 100%;
+    justify-content: center; 
+  }
+  .nav{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  .main-section-right {
+    width: 100%; 
+}
+.about-me img,
+.contact-me,
+.newsletter,
+.contact-me,
+.categories {
+  display: none;
+}
+.content-box-twin{
+  justify-content: space-between;
+}
+.content-box-twin :last-child {
+  padding-left: 0;
+}
+.content-box-twin>div{
+  width: 49%;
+  padding: 0;
+}
+.content-box-twin :first-child {
+  padding-right: 0; 
+}
+.gallery-item{
+  height: 140px;
+}
+.footer-copy { 
+  justify-content: center;
+}
+.content-image-box {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 0;
+  right: 0;
+}
+}
+
